@@ -29,8 +29,16 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem "haml-rails", "~> 1.0"
 
+# Trailblazer
+gem 'trailblazer', '~> 2.0', '>= 2.0.7'
+gem "trailblazer-rails"
+gem "trailblazer-cells"
+gem "cells-hamlit"
+gem "cells-rails"
+
 # Design
 gem 'simple_form'
+gem 'dry-validation', '~> 0.6.0'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 
