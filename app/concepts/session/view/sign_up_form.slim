@@ -1,0 +1,14 @@
+.container
+  .row
+    h2 Sign Up
+    =simple_form_for(model, url: sessions_sign_up_path) do |f|
+      .form-group
+        =f.input :name, label: false, placeholder: "Name", input_html: { class: "form-control" }
+      .form-group
+        =f.input :email, label: false, placeholder: "Email", input_html: { class: "form-control" }
+      .form-group
+        =f.input :password, label: false, placeholder: "Password", input_html: { class: "form-control" }
+      .form-group
+        =f.input :confirm_password, label: false, placeholder: "Confirm password", input_html: { class: "form-control" }
+      .form-group
+        =f.submit "Sign Up", class: "btn btn-primary"
