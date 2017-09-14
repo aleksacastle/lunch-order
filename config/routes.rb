@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   post "sessions/sign_in"
 
   resources :users
-  resources :items
-  resources :menus
+
+  resources :menus do
+    resources :items
+  end
   resources :lunches
 
-  root "home#index"
+  root "menu#index"
 end
