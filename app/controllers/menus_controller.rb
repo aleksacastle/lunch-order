@@ -1,5 +1,9 @@
 class MenusController < ApplicationController
 
+  def show
+    render cell(Menu::Cell::Show, @form)
+  end
+
   def new
     run Menu::Create
   end
