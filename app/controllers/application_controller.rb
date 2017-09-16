@@ -5,5 +5,10 @@ class ApplicationController < ActionController::Base
    Tyrant::Session.new(request.env['warden'])
   end
 
+  private
+  def _run_options(options)
+    options.merge( "current_user" => tyrant.current_user )
+  end
+
   helper_method :tyrant
 end
