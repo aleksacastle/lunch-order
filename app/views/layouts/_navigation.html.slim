@@ -6,9 +6,10 @@ nav.navbar.navbar-default
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      li = link_to 'Home', class: 'navbar-brand'
 
     .collapse.navbar-collapse#bs-example-navbar-collapse-1
       ul.nav.navbar-nav
+        li = link_to 'Home', class: 'navbar-brand'
+        li = link_to 'Create menu', new_menu_path
         li = link_to 'Profile'
         li = link_to 'Logout'
