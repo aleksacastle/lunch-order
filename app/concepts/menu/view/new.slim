@@ -1,0 +1,11 @@
+.container
+  h1
+    | New menu
+  .row
+    .col-md-6.col-md-offset-3
+      = simple_form_for @menu do |f|
+          = f.input :title, class: 'form-control'
+          br
+          .pull-left
+            => f.button :submit, class:"btn btn-warning"
+            => link_to 'Delete',@album, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger'
