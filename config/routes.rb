@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   resources :menus do
     resources :items
   end
+
   resources :lunches
 
-  root "menu#index"
+  root "menus#show"
 end
