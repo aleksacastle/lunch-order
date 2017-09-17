@@ -1,8 +1,12 @@
 class Item::Create < Trailblazer::Operation
-  step :add_to_menu
-  step Policy::Pundit(ItemPolicy, :create?)
-  step Model(Item, :new)
-  step Contract::Build(constant: Item::Contract::Create)
+  # step :add_to_menu
+  class Present < Trailblazer::Operation
+    # step Policy::Pundit(ItemPolicy, :create?)
+    step Model(Item, :new)
+    step Contract::Build(constant: Item::Contract::Create)
+  end
+  
+  step Nested(Present)
   step Contract::Validate()
   step Contract::Persist()
 
