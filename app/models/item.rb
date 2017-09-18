@@ -2,6 +2,8 @@ class Item < ApplicationRecord
   belongs_to :lunches
   belongs_to :menu
 
+  mount_uploader :avatar, AvatarUploader
+
   enum category: [ :first_course, :second_course, :third_course ]
 
   scope :first_course, -> { where(category: first_course) }

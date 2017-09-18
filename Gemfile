@@ -28,12 +28,16 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'jquery-rails'
 
+gem 'carrierwave', '~> 1.0'
+
 # Trailblazer
 gem 'trailblazer'
 gem "trailblazer-rails"
 gem "trailblazer-cells"
 gem "cells-rails"
 gem "cells-slim"
+gem 'reform', '~> 2.2.4'
+gem 'reform-rails', '~> 0.1.7'
 
 # Design
 gem 'simple_form'
@@ -45,11 +49,6 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 gem 'tyrant'
 gem 'warden'
 gem 'pundit'
-
-
-gem 'reform', '~> 2.2.4'
-gem 'reform-rails', '~> 0.1.7'
-
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
