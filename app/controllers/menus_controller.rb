@@ -13,7 +13,7 @@ class MenusController < ApplicationController
   def create
     run Menu::Create do |result|
       flash[:notice] = "Created menu for today"
-      return redirect_to menus_path
+      return redirect_to menu_path( result['model'].id )
     end
 
     render cell(Menu::Cell::CreateForm, @form)

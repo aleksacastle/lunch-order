@@ -16,5 +16,5 @@ Rails.application.routes.draw do
 
   resources :lunches
 
-  root "menus#show"
+  root "menus#index"
 end
