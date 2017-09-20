@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  belongs_to :lunches
+  belongs_to :lunch
   belongs_to :menu
 
   mount_uploader :avatar, AvatarUploader
