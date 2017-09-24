@@ -16,7 +16,7 @@ module LunchOrder
     config.load_defaults 5.1
     # config.cells.with_assets = ["session/cells/sign_in_form"]
     config.generators do |g|
-      g.template_engine :haml
+      g.template_engine :slim
       g.test_framework :rspec,
         fixtures: true,
         view_specs: false,
@@ -24,7 +24,6 @@ module LunchOrder
         routing_specs: false,
         controller_specs: false,
         request_specs: false
-      g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
 
     # Settings in config/environments/* take precedence over those specified here.
