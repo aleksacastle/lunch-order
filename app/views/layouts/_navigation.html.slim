@@ -9,7 +9,11 @@ nav.navbar.navbar-default
 
     .collapse.navbar-collapse#bs-example-navbar-collapse-1
       ul.nav.navbar-nav
-        li = link_to 'Home', class: 'navbar-brand'
+      -if tyrant.signed_in?
+        li = link_to "Hi, #{tyrant.current_user.email}"
         li = link_to 'Create menu', new_menu_path
         li = link_to 'Profile'
-        li = link_to 'Logout'
+        li = link_to "Sign out", sessions_sign_out_path
+      -else
+        li = link_to "Sign in", sessions_sign_in_form_path
+        li = link_to "Sign up", sessions_sign_up_form_path
