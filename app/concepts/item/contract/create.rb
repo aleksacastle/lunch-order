@@ -3,7 +3,8 @@ module  Item::Contract
     property :category
     property :price
     property :name
+    property :menu
 
-    validates :name, :category, :price, presence: true
+    validates :name, :category, :price, :menu, presence: true
   end
 end
