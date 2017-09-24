@@ -4,6 +4,7 @@ require 'rails/all'
 
 require "trailblazer/rails/railtie"
 require "tyrant/railtie"
+require "trailblazer/loader"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
