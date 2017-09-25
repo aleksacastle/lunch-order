@@ -1,0 +1,9 @@
+.container
+  .row
+    =simple_form_for(model, url: sessions_sign_in_path, as: :session) do |f|
+      .form-group
+        =f.input :email, label: false, placeholder: "Email", input_html: { class: "form-control" }
+      .form-group
+        =f.input :password, label: false, placeholder: "Password", input_html: { class: "form-control" }
+      .form-group
+        =f.submit "Log in", class: "btn btn-primary"

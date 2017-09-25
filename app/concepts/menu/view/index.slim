@@ -1,0 +1,5 @@
+.container
+  .row-album
+    - model.each do |model|
+      =link_to model.weekday, menu_path( model )
+      br

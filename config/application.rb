@@ -2,6 +2,10 @@ require_relative 'boot'
 
 require 'rails/all'
 
+require "trailblazer/rails/railtie"
+require "tyrant/railtie"
+require "trailblazer/loader"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -10,6 +14,17 @@ module LunchOrder
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
+    # config.cells.with_assets = ["session/cells/sign_in_form"]
+    config.generators do |g|
+      g.template_engine :slim
+      g.test_framework :rspec,
+        fixtures: true,
+        view_specs: false,
+        helper_specs: false,
+        routing_specs: false,
+        controller_specs: false,
+        request_specs: false
+    end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
